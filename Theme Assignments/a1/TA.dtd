@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT meal ((breakfast | lunch | dinner)*,dessert)>
+
+<!ELEMENT breakfast (name,cost)>
+<!ATTLIST breakfast id ID #REQUIRED>
+
+<!ELEMENT lunch (name,cost)>
+<!ATTLIST lunch id ID #REQUIRED 
+                after IDREF #IMPLIED>
+
+<!ELEMENT dinner (name,cost)>
+<!ATTLIST dinner id ID #REQUIRED>
+
+<!ELEMENT dessert EMPTY>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ATTLIST cost cur (ZAR|USD) #REQUIRED>

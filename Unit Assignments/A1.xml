@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <userInfo>
+        <username>Pholcidae</username>
+        <name>Daddy Long Legs (92)</name>
+        <number>321 023 2222</number>
+        <location>Hatfield, Pretoria</location>
+    </userInfo>
+
+    <movies>
+        <movie title="Brokeback Mountain">
+            <duration>134min</duration>
+            <genres>
+                <genre>Drama</genre>
+                <genre>Romance</genre>
+            </genres>
+            <synopsis>The story of a forbidden and secretive relationship between two cowboys, and their lives over the years.</synopsis>
+            <rating>
+                <contentRating>R</contentRating>
+                <consumerRating>7/10</consumerRating>
+            </rating>
+            <releaseDate country="USA">13 January 2006</releaseDate>
+            <cast>
+                <actor>Jake Gyllenhaal</actor>
+                <actor>Heath Ledger</actor>
+                <actor>Michelle Williams</actor>
+            </cast>
+            <staff>
+                <writers>
+                    <contributor dedication="short story">Annie Proulx</contributor>
+                    <contributor dedication="screenplay">Larry McMurtry</contributor>
+                </writers>
+                <director>Ang Lee</director>
+            </staff>
+        </movie>
+
+        <movie title="Juno">
+            <duration>1h 36min</duration>
+            <genres>
+                <genre>Comedy</genre>
+                <genre>Drama</genre>
+            </genres>
+            <synopsis>
+                Faced with an unplanned pregnancy, an offbeat young woman makes an unusual decision regarding her unborn
+                child.
+            </synopsis>
+            <rating>
+                <contentRating>PG-13</contentRating>
+                <consumerRating>4 stars</consumerRating>
+            </rating>
+            <releaseDate country="USA">25 December 2007</releaseDate>
+            <cast></cast>
+            <staff></staff>
+        </movie>
+    </movies>
+
+    <games>
+        <game title="The Last of Us Part II" series="">
+            <genres></genres>
+            <synopsis></synopsis>
+            <rating></rating>
+            <releaseDate country=""></releaseDate>
+            <developers>
+                <developer>Naughty Dog</developer>
+            </developers>
+            <staff>
+                <designers>
+                    <designer>Emilia Schatz</designer>
+                    <designer>Ricky Cambier</designer>
+                </designers>
+                <writers>
+                    <contributor>Neil Druckmann</contributor>
+                    <contributor>Halley Gross</contributor>
+                </writers>
+            </staff>
+            <platforms>
+                <platform>Playstation 4</platform>
+            </platforms>
+            <awards>The Game Award for Most Anticipated Game</awards>
+            <engine></engine>
+        </game>
+
+        <game title="Red Dead Redemption 2" series="Red Dead">
+            <genres></genres>
+            <synopsis>
+                Red Dead Redemption 2 is a Western action-adventure game developed and published by Rockstar Games. It
+                was released on October 26, 2018, for the PlayStation 4 and Xbox One consoles. The third entry in the
+                Red Dead series is a prequel to the 2010 game Red Dead Redemption. 
+            </synopsis>
+            <rating>10/10!!!!!</rating>
+            <releaseDate country="">26 October 2018</releaseDate>
+            <developers></developers>
+            <staff>
+                <designers></designers>
+                <writers></writers>
+            </staff>
+            <platforms>
+                <platform>Playstation 4</platform>
+                <platform>Xbox One</platform>
+            </platforms>
+            <awards>The Game Award for Best Narrative</awards>
+            <engine>Rockstar Advanced Game Engine</engine>
+        </game>
+
+        <game title="Lost Ark" series="">
+            <genres>
+                <genre>Massively multiplayer online role-playing game</genre>
+            </genres>
+            <synopsis></synopsis>
+            <rating>3.4 Stars</rating>
+            <releaseDate country="">4 December 2019</releaseDate>
+            <developers>
+                <developer>Smilegate</developer>
+                <developer>Tripod Studio</developer>
+                <developer>Smilegate Entertainment, Inc.</developer>
+                <developer>Smilegate RPG</developer>
+            </developers>
+            <staff>
+                <designers></designers>
+                <writers></writers>
+            </staff>
+            <platforms>
+                <platform>Windows</platform>
+            </platforms>
+            <awards></awards>
+            <engine>Unreal Engine 3</engine>
+        </game>
+    </games>
+
+    <music>
+        <album title="Everyone Who Pretended to Like Me Is Gone">
+            <artist>The Walkmen</artist>
+            <duration>50:49</duration>
+            <genres>
+                <genre>Pop/Rock</genre>
+                <genre>Styles</genre>
+                <genre>Alternative/Indie Rock</genre>
+                <genre>Indie Rock</genre>
+                <genre>Garage Rock Revival</genre>
+            </genres>
+            <releaseDate country="">26 March 2002</releaseDate>
+            <recordDate>2001</recordDate>
+            <rating>4.5 stars</rating>
+        </album>
+
+        <song title="How do you sleep?">
+            <artist>Sam Smith</artist>
+            <duration>3:22</duration>
+            <genres>
+                <genre>Pop</genre>
+                <genre>Dance-pop</genre>
+            </genres>
+            <releaseDate country="">19 July 2019</releaseDate>
+            <writers>
+                <contributor>Sam Smith</contributor>
+                <contributor>Savan Kotecha</contributor>
+                <contributor>Max Martin</contributor>
+                <contributor>Ilya Salmanzadeh</contributor>
+            </writers>
+            <styles></styles>
+        </song>
+
+        <song title="Daru">
+            <artist>Daru</artist>
+            <duration></duration>
+            <genres>
+                <genre>Vocal</genre>
+                <genre>International</genre>
+            </genres>
+            <releaseDate country="">2002</releaseDate>
+            <writers></writers>
+            <styles>
+                <style>Cabaret</style>
+                <style>Russian Traditions</style>
+            </styles>
+        </song>
+    </music>
+
+    <food>
+        <restaurant title="Springbok Bar">
+            <rating>4.1 stars</rating>
+            <location>495 Hilda St, Hatfield, Pretoria 0028</location>
+            <number>012 362 7766</number>
+        </restaurant>
+
+        <dish title="Chow Mein">
+            <origin>Guangdong, China</origin>
+            <ingredients>
+                <ingredient>noodles</ingredient>
+                <ingredient>soy sauce</ingredient>
+                <ingredient>vegetables</ingredient>
+            </ingredients>
+            <variations>
+                <variation>chicken</variation>
+                <variation>pork</variation>
+                <variation>beef</variation>
+                <variation>shrimp</variation>
+                <variation>tofu</variation>
+            </variations>
+            <course></course>
+        </dish>
+
+        <dish title="Taramasalata">
+            <origin>Greece</origin>
+            <ingredients>
+                <ingredient>tarama (salted and cured roe of cod or carp)</ingredient>
+                <ingredient>bread crumbs or mashed potatoes</ingredient>
+                <ingredient>lemon juice or vinegar</ingredient>
+                <ingredient>olive oil</ingredient>
+            </ingredients>
+            <variations></variations>  
+            <course>Meze</course>       
+        </dish>
+    </food>
+</dataset>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE meal SYSTEM "TA.dtd">
+<meal>
+	<!-- the <meal> element can hold multiple <breakfast>, <lunch> and <dinner> element in no specfic order-->
+	<!-- <meal> element can also be completely empty-->
+
+	<!-- <breakfast>, <lunch> and <dinner> all follow the same rules-->
+	<!-- they each contain two element <name> and <cost> these element has to appear in order-->
+	<breakfast id="b102">
+	<!-- @id has to be a unique identifier-->
+		<name>Toast</name> <!-- Plain text-->
+		<cost cur="ZAR">30</cost> <!-- Plain text-->
+		<!-- 
+			the attribute @cur has to appear
+			it can either be ZAR or USD 
+		-->
+	</breakfast>
+
+	<lunch id="l103" after="b102">
+	<!-- element can hold an optional attribute @after-->
+	<!-- @after need to reference an existing id in the document-->
+		<name>Pasta</name>
+		<cost cur="ZAR">50</cost>
+	</lunch>
+
+	<dinner id="d104">
+		<name>Steak</name>
+		<cost cur="ZAR">90</cost>
+	</dinner>
+
+	<!-- after many <breakfast>, <lunch> and <dinner> a single <dessert> may appear--> 
+	<!-- <dessert> is an empty tag-->
+	<dessert></dessert>
+</meal>

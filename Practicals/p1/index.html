@@ -1,0 +1,18 @@
+<!-- Keelan Matthews 21549967 -->
+<div id="root">
+    <h1 style="font-family:Verdana">My To-do List</h1>
+    
+    <label for="list-input" style="font-family:Verdana">What do you need to do today?</label><br>
+    <input type="text" id="list-input" 
+            v-model="item" 
+            :style="item.length < 4 ? 'border: 4px solid #ff6e6e' : 'border: 4px solid #b3ffc1'"
+            style="font-family:Verdana; margin-top: 20px; border-radius: 20px 0 0 20px; height: 30px; width: 300px;"/>
+        
+    <button :disabled="item.length < 4" 
+            v-on:click="add_item" 
+            style="border-radius: 0 20px 20px 0; border: 0; padding: 10px; width: 60px; height: 37px;">Add</button>
+        
+    <ol>
+        <li v-for="listItem in list" style="font-family:Verdana; margin-bottom: 10px;">{{ listItem.text }}</li>
+    </ol>
+</div>
