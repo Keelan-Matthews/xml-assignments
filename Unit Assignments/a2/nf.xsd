@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!-- Keelan Matthews 21549967 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://realbooks.cn/ns/1.0/nf"
+           targetNamespace="https://realbooks.cn/ns/1.0/nf">
+
+    <xs:simpleType name="char-length">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="section" minOccurs="0" maxOccurs="3">
+                    <xs:complexType>
+                        <xs:choice>
+                            <!-- First format -->
+                            <xs:sequence>
+                                <xs:element name="title" type="char-length"/>
+                                <xs:element name="authors">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="author" minOccurs="1" maxOccurs="unbounded" type="char-length"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="publisher">
+                                    <xs:complexType>
+                                        <xs:simpleContent>
+                                            <xs:extension base="char-length">
+                                                <xs:attribute name="year">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="1900"/>
+                                                            <xs:maxInclusive value="2100"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:extension>
+                                        </xs:simpleContent>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+
+                            <!-- Second format -->
+                            <xs:sequence>
+                                <xs:element name="isbn">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="isbn" maxOccurs="3">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:pattern value=".{10}|.{13}"></xs:pattern>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="notes" type="xs:string"/>
+                                <xs:element name="format" type="char-length"/>
+                                <xs:element name="edition">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+                                            <xs:maxInclusive value="20"></xs:maxInclusive>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="subjects">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="subject" type="char-length" minOccurs="1" maxOccurs="unbounded"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

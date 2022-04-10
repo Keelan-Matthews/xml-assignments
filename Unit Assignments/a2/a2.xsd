@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- Keelan Matthews 21549967 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:nf="https://realbooks.cn/ns/1.0/nf"
+    xmlns:f="https://realbooks.cn/ns/1.0/f">
+
+    <xs:import namespace="https://realbooks.cn/ns/1.0/nf" schemaLocation="nf.xsd"/>
+	
+	<xs:import namespace="https://realbooks.cn/ns/1.0/f" schemaLocation="f.xsd"/>
+
+    <xs:element name="books">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element ref="nf:book"/>
+                <xs:element ref="f:book"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
