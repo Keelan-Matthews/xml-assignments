@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Keelan Matthews 2154996-->
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" xml:lang="en"
+	unique-identifier="pub-identifier">
+	<metadata>
+		<dc:title id="pub-title">Matric Poetry</dc:title>
+		<dc:alternative id="pub-alternative">Poetry for Year 12 NSC</dc:alternative>
+		<dc:language id="pub-language">en</dc:language>
+		<dc:creator id="pub-creator">Keelan Matthews</dc:creator>
+		<dc:date id="pub-date">2022-05-14</dc:date>
+		<dc:publisher id="pub-publisher">Fox Wood Books</dc:publisher>
+	</metadata>
+	<manifest>
+		<item id="htmltoc" properties="nav" media-type="application/xhtml+xml" href="toc.xhtml"/>
+		<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml"/>
+		<item id="ch1" href="ch1.xhtml" media-type="application/xhtml+xml"/>
+		<item id="ch2" href="ch2.xhtml" media-type="application/xhtml+xml"/>
+		<item id="ch3" href="ch3.xhtml" media-type="application/xhtml+xml"/>
+		<item id="ch4" href="ch4.xhtml" media-type="application/xhtml+xml"/>
+		<item id="ch5" href="ch5.xhtml" media-type="application/xhtml+xml"/>
+
+		<item id="cover-img" href="images/poetry.jpeg" media-type="image/jpeg"/>
+	</manifest>
+	<spine>
+		<itemref idref="cover" linear="no"/>
+		<itemref idref="htmltoc" linear="yes"/>
+		<itemref idref="ch1"/>
+		<itemref idref="ch2"/>
+		<itemref idref="ch3"/>
+		<itemref idref="ch4"/>
+		<itemref idref="ch5"/>
+	</spine>
+</package>
