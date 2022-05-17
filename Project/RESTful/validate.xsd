@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!-- Keelan Matthews 21549967 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Restriction on schedule -->
+    <xs:element name="schedule">
+        <xs:complexType mixed="true">
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="event" type="eventType"/>
+            </xs:sequence>
+            <xs:attribute name="user" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Restriction on event -->
+    <xs:complexType name="eventType" mixed="true">
+        <xs:sequence>
+            <xs:element name="title" type="titleType"/>
+            <xs:element name="type" type="typeType"/>
+            <xs:element name="date" type="dateType"/>
+            <xs:element name="guests" type="guestsType"/>
+            <xs:element name="venue" type="titleType"/>
+            <xs:element name="description" type="descriptionType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="idType" use="required"/>
+    </xs:complexType>
+
+    <!-- Restriction on event attribute -->
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:string">
+            <xs:length value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on title -->
+    <xs:simpleType name="titleType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="25"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on type -->
+    <xs:simpleType name="typeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Event"/>
+            <xs:enumeration value="Task"/>
+            <xs:enumeration value="Appointment"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on date -->
+    <xs:complexType name="dateType" mixed="true">
+        <xs:sequence>
+            <xs:element name="day" type="dayType" minOccurs="1"/>
+            <xs:element name="month" type="monthType" minOccurs="1"/>
+            <xs:element name="startingTime" type="startingType" minOccurs="0"/>
+            <xs:element name="endingTime" type="startingType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="repeat" type="repeatType" />
+    </xs:complexType>
+
+    <!-- Restriction on repeat -->
+    <xs:simpleType name="repeatType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Daily"/>
+            <xs:enumeration value="Weekly"/>
+            <xs:enumeration value="Monthly"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on day -->
+    <xs:simpleType name="dayType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="31"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on month -->
+    <xs:simpleType name="monthType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="January"/>
+            <xs:enumeration value="February"/>
+            <xs:enumeration value="March"/>
+            <xs:enumeration value="April"/>
+            <xs:enumeration value="May"/>
+            <xs:enumeration value="June"/>
+            <xs:enumeration value="July"/>
+            <xs:enumeration value="August"/>
+            <xs:enumeration value="September"/>
+            <xs:enumeration value="October"/>
+            <xs:enumeration value="November"/>
+            <xs:enumeration value="December"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Starting time restriction -->
+    <xs:simpleType name="startingType">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="([0-9]{2}:[0-9]{2} )(AM|PM)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on guests type -->
+    <xs:complexType name="guestsType">
+        <xs:sequence maxOccurs="10">
+            <xs:element name="guest" type="guestType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Restriction on guest type -->
+    <xs:complexType name="guestType">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="name" type="nameType"/>
+                <xs:element name="email" type="nameType"/>
+            </xs:sequence>
+        </xs:choice>
+    </xs:complexType>
+
+    <!-- Restriction on name -->
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriction on description -->
+    <xs:simpleType name="descriptionType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
